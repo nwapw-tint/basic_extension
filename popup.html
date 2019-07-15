@@ -3,14 +3,33 @@
     <head>
       <style>
         button {
-          height: 100px;
-          width: 100px;
+          height: 20px;
+          width: 20px;
           outline: none;
         }
       </style>
+	  
     </head>
-    <body>
-		<p> Push me, I'm safe </p>
-      <button id="changeColor"></button>
+	
+    <body bgcolor="#59D490">
+	
+		<b><p style="color:#FFFB11"> Study for how long?: </p></b>
+		<form action="/background.js">  <!-- where the variable is sent i think lmao-->
+			<input type="text" name="howLong"><br>
+		    <input type="submit" value="Submit">
+		</form>
+		
+		<b><p style="color:#FFFB11"> What Color would you like?: </p></b>
+        <center><button style="color:#FFFB11" id="changeColor"></button><button id="changeColor"></button><button id="changeColor"></button><button id="changeColor"></button><button id="changeColor"></button><button id="changeColor"></button></center>
+	   
+	   <b><p style="color:#FFFB11"> Blocked websites: </p></b>
+		<form action="/action_page.php">
+			<input type="text" name="blockedWebsites"><br>
+		    <input type="submit" value="Submit">
+		</form>
+		<p></p>
+		<p></p>
+		<input type="submit" value="Okayh GO">
+	  
     </body>
   </html>
