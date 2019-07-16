@@ -2,10 +2,11 @@
   "manifest_version": 2,
   "name": "NWAPW Tint",
   "version": "0.1",
-  /*"background": {
-    "scripts": ["background.js"]
-  },*/
-  "browser_action": {
+  "permissions": ["storage"],
+  "background": {
+      "scripts": ["background.js"],
+      "persistent": false
+    },
     "default_icon": "icon.png",
     "default_popup": "popup.html"
   }

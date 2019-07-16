@@ -1,5 +1,3 @@
-// background.js
-
 // Called when the user clicks on the browser action.
 chrome.browserAction.onClicked.addListener(function(tab) {
   // Send a message to the active tab
@@ -9,7 +7,6 @@ chrome.browserAction.onClicked.addListener(function(tab) {
   });
 });
 
-// This block is new!
 chrome.runtime.onMessage.addListener(
   function(request, sender, sendResponse) {
     if( request.message === "open_new_tab" ) {
@@ -17,3 +14,9 @@ chrome.runtime.onMessage.addListener(
     }
   }
 );
+
+  chrome.runtime.onInstalled.addListener(function() {
+    chrome.storage.sync.set({color: '#3aa757'}, function() {
+      console.log("The color is green.");
+    });
+  });
