@@ -1,35 +1,46 @@
- <!DOCTYPE html>
-  <html>
-    <head>
-      <style>
-        button {
-          height: 20px;
-          width: 20px;
-          outline: none;
-        }
-      </style>
-	  
-    </head>
-	
-    <body bgcolor="#59D490">
-	
-		<b><p style="color:#FFFB11"> Study for how long?: </p></b>
-		<form action="/background.js">  <!-- where the variable is sent i think lmao-->
-			<input type="text" name="howLong"><br>
-		    <input type="submit" value="Submit">
-		</form>
+<!DOCTYPE html>
+<html>
+	<head>
+		<script src="popup.js"></script>
+		<style>
+		button {
+			height: 20px;
+			width: 20px;
+			outline: none;
+		}
+		</style>
+	</head>
+	<body bgcolor="#59D490">
+		<b><p style="color:#FFFB11">How long do you want to study? (seconds)</p></b>
+		<input type="text" id="time_input"><br>
+		<input type="submit" value="Submit" id="time_submit"><br>
 		
-		<b><p style="color:#FFFB11"> What Color would you like?: </p></b>
-        <center><button style="color:#FFFB11" id="changeColor"></button><button id="changeColor"></button><button id="changeColor"></button><button id="changeColor"></button><button id="changeColor"></button><button id="changeColor"></button></center>
-	   
-	   <b><p style="color:#FFFB11"> Blocked websites: </p></b>
-		<form action="/Time.txt">
-			<input type="text" name="blockedWebsites"><br>
-		    <input type="submit" value="Submit">
-		</form>
+		<b><p style="color:#FFFB11">What color would you like for allowed websites?</p></b>
+		<center>
+			<button style="background-color:#FF0000" id="red_button_allowed"></button>
+			<button style="background-color:#FFFF00" id="yellow_button_allowed"></button>
+			<button style="background-color:#00FF00" id="green_button_allowed"></button>
+			<button style="background-color:#0000FF" id="blue_button_allowed"></button>
+			<button style="background-color:#FF00FF" id="magenta_button_allowed"></button>
+			<button id="custom_button_allowed"></button>
+		</center>
+		
+		<b><p style="color:#FFFB11">What color would you like for not allowed websites?</p></b>
+		<center>
+			<button style="background-color:#FF0000" id="red_button_not_allowed"></button>
+			<button style="background-color:#FFFF00" id="yellow_button_not_allowed"></button>
+			<button style="background-color:#00FF00" id="green_button_not_allowed"></button>
+			<button style="background-color:#0000FF" id="blue_button_not_allowed"></button>
+			<button style="background-color:#FF00FF" id="magenta_button_not_allowed"></button>
+			<button id="custom_button_not_allowed"></button>
+		</center>
+		
+		<b><p style="color:#FFFB11">What websites would you like to block during this session?</p></b>
+		<input type="text" id="website_input"><br>
+		<input type="submit" value="Submit" id="website_submit"><br>
+		
 		<p></p>
 		<p></p>
-		<input type="submit" value="Okayh GO">
-	  
-    </body>
-  </html>
+		<input type="submit" value="Okay go!" id="start_study_time">
+	</body>
+</html>
