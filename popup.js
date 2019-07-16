@@ -4,69 +4,69 @@ var nr = 255, ng = 0, nb = 0, na = 100;
 var blackListedSites = [];
 
 document.addEventListener('DOMContentLoaded', () => {
-	document.getElementById('red_button_allowed').addEventListener('click', () => {
+	addClickListener('red_button_allowed', () => {
 		ar = 255;
 		ag = 0;
 		ab = 0;
 	}, false);
-	document.getElementById('yellow_button_allowed').addEventListener('click', () => {
+	addClickListener('yellow_button_allowed', () => {
 		ar = 255;
 		ag = 255;
 		ab = 0;
 	}, false);
-	document.getElementById('green_button_allowed').addEventListener('click', () => {
+	addClickListener('green_button_allowed', () => {
 		ar = 0;
 		ag = 255;
 		ab = 0;
 	}, false);
-	document.getElementById('blue_button_allowed').addEventListener('click', () => {
+	addClickListener('blue_button_allowed', () => {
 		ar = 0;
 		ag = 0;
 		ab = 255;
 	}, false);
-	document.getElementById('magenta_button_allowed').addEventListener('click', () => {
+	addClickListener('magenta_button_allowed', () => {
 		ar = 255;
 		ag = 0;
 		ab = 255;
 	}, false);
-	document.getElementById('custom_button_allowed').addEventListener('click', () => {
+	addClickListener('custom_button_allowed', () => {
 		//Color wheel of some sort?
 	}, false);
 	
 	
 	
-	document.getElementById('red_button_not_allowed').addEventListener('click', () => {
+	addClickListener('red_button_not_allowed', () => {
 		nr = 255;
 		ng = 0;
 		nb = 0;
 	}, false);
-	document.getElementById('yellow_button_not_allowed').addEventListener('click', () => {
+	addClickListener('yellow_button_not_allowed', () => {
 		nr = 255;
 		ng = 255;
 		nb = 0;
 	}, false);
-	document.getElementById('green_button_not_allowed').addEventListener('click', () => {
+	addClickListener('green_button_not_allowed', () => {
 		nr = 0;
 		ng = 255;
 		nb = 0;
 	}, false);
-	document.getElementById('blue_button_not_allowed').addEventListener('click', () => {
+	addClickListener('blue_button_not_allowed', () => {
 		nr = 0;
 		ng = 0;
 		nb = 255;
 	}, false);
-	document.getElementById('magenta_button_not_allowed').addEventListener('click', () => {
+	addClickListener('magenta_button_not_allowed', () => {
 		nr = 255;
 		ng = 0;
 		nb = 255;
 	}, false);
-	document.getElementById('custom_button_not_allowed').addEventListener('click', () => {
+	addClickListener('custom_button_not_allowed', () => {
 		//Color wheel of some sort?
 	}, false);
 	
 	
 	
-	document.getElementById('time_submit').addEventListener('click', () => {
+	addClickListener('time_submit', () => {
 		var input = document.getElementById('time_input').value;
 		if (isNaN(input))
 			showError("Input is not a number!");
@@ -81,7 +81,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	
 	
 	
-	document.getElementById('website_submit').addEventListener('click', () => {
+	addClickListener('website_submit', () => {
 		var input = document.getElementById('website_input').value;
 		if (input.length == 0)
 			showError("Website is empty!");
@@ -103,7 +103,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	
 	
 	
-	document.getElementById('start_study_time').addEventListener('click', () => {
+	addClickListener('start_study_time', () => {
 		let str = "Blocked websites:";
 		for (let i = 0; i < blackListedSites.length; i++)
 			str += "\n" + blackListedSites[i];
@@ -111,8 +111,12 @@ document.addEventListener('DOMContentLoaded', () => {
 		str += "\n\nNot allowed website tint: R=" + nr + " G=" + ng + " B=" + nb;
 		console.log(str);
 		
-	}, false);
+	});
 }, false);
+
+function addClickListener(id, callback) {
+	document.getElementById(id).addEventListener('click', callback, false);
+}
 
 function showError(error) {
 	alert("ERROR: " + error);
