@@ -8,30 +8,30 @@ document.addEventListener('DOMContentLoaded', () => {
 		ar = 255;
 		ag = 0;
 		ab = 0;
-	}, false);
+	});
 	addClickListener('yellow_button_allowed', () => {
 		ar = 255;
 		ag = 255;
 		ab = 0;
-	}, false);
+	});
 	addClickListener('green_button_allowed', () => {
 		ar = 0;
 		ag = 255;
 		ab = 0;
-	}, false);
+	});
 	addClickListener('blue_button_allowed', () => {
 		ar = 0;
 		ag = 0;
 		ab = 255;
-	}, false);
+	});
 	addClickListener('magenta_button_allowed', () => {
 		ar = 255;
 		ag = 0;
 		ab = 255;
-	}, false);
+	});
 	addClickListener('custom_button_allowed', () => {
 		//Color wheel of some sort?
-	}, false);
+	});
 	
 	
 	
@@ -39,30 +39,30 @@ document.addEventListener('DOMContentLoaded', () => {
 		nr = 255;
 		ng = 0;
 		nb = 0;
-	}, false);
+	});
 	addClickListener('yellow_button_not_allowed', () => {
 		nr = 255;
 		ng = 255;
 		nb = 0;
-	}, false);
+	});
 	addClickListener('green_button_not_allowed', () => {
 		nr = 0;
 		ng = 255;
 		nb = 0;
-	}, false);
+	});
 	addClickListener('blue_button_not_allowed', () => {
 		nr = 0;
 		ng = 0;
 		nb = 255;
-	}, false);
+	});
 	addClickListener('magenta_button_not_allowed', () => {
 		nr = 255;
 		ng = 0;
 		nb = 255;
-	}, false);
+	});
 	addClickListener('custom_button_not_allowed', () => {
 		//Color wheel of some sort?
-	}, false);
+	});
 	
 	
 	
@@ -77,7 +77,7 @@ document.addEventListener('DOMContentLoaded', () => {
 				alert("~" + input + " seconds have passed.");
 			}, input * 1000);
 		}
-	}, false);
+	});
 	
 	
 	
@@ -99,7 +99,7 @@ document.addEventListener('DOMContentLoaded', () => {
 			
 			document.getElementById('website_input').value = "";
 		}
-	}, false);
+	});
 	
 	
 	
