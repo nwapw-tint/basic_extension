@@ -1,4 +1,4 @@
-var ar = 255, ag = 0, ab = 0, aa = 100;
+var ar = 0, ag = 255, ab = 0, aa = 100;
 var nr = 255, ng = 0, nb = 0, na = 100;
 
 var blackListedSites = [];
